@@ -1,6 +1,6 @@
 const name = prompt("Name of new directory to create:");
 if (name) {
-fetch(document.location.href + "/" + name, {
+fetch(document.location.href + "/" + encodeURIComponent(name), {
   method: "MKCOL",
   mode: "same-origin",
   credentials: "same-origin",
